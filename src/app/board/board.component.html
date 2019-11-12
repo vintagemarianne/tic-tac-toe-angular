@@ -1,0 +1,11 @@
+<div class="board">
+    <div class="status">{{status}}</div>
+    <div class="reset" (click)="onReset()">Reset</div>
+
+    <div class="square-wrapper">
+        <div *ngFor="let value of values, index as id" >
+            <app-square [value]="value" (play)="onPlay(id)"></app-square>
+        </div>
+    </div>
+</div>
+
